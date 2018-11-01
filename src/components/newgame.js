@@ -2,14 +2,14 @@ import React from "react";
 import Game from './app';
 
 class Newgame extends React.Component {
-  constractor(props) {
+    constructor(props) {
     super(props);
 
   }
 
 
   render() {
-    retrun(
+    return(
       <div className="new-game">
         <Game />
       </div>

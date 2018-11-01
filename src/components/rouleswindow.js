@@ -2,14 +2,14 @@ import React from "react";
 import Game from './game';
 
 class Rouleswindow extends React.Component {
-  constractor(props) {
+    constructor(props) {
     super(props);
 
   }
 
 
   render() {
-    retrun(
+    return(
       <div className="roules-window">
         What do I do?
 This is a Hot or Cold Number Guessing Game. The game goes like this:

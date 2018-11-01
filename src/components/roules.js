@@ -2,14 +2,14 @@ import React from "react";
 import Rouleswindow from './rouleswindow';
 
 class Roules extends React.Component {
-  constractor(props) {
+    constructor(props) {
     super(props);
 
   }
 
 
   render() {
-    retrun(
+    return(
       <div className="roules">
         <Rouleswindow />
       </div>

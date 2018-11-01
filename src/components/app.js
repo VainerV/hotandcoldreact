@@ -3,12 +3,12 @@ import Navbar from "./navbar";
 import Game from "./game";
 
 class App extends React.Component {
-  constractor(props) {
-    super(props);
+    constructor() {
+    super();
   }
 
   render() {
-    retrun(
+    return(
       <div className="application">
         <Navbar />
         <Game />
