@@ -10,7 +10,7 @@ class Newgame extends React.Component {
 
   render() {
     retrun(
-      <div className="navBar">
+      <div className="new-game">
         <Game />
       </div>
     );
