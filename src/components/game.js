@@ -8,7 +8,7 @@ class Game extends React.Component {
     return (
       <div className="game">
         <div className="game-elements-container">
-          <span className="small-logo">Hot or Cold</span>
+          <span className="small-logo">HINT</span>
          
             <input
               type="text"
@@ -17,7 +17,7 @@ class Game extends React.Component {
             />
             <button type="submit" className="submit-guess">Sumbit Guess</button>
             <p className="count" >
-              Guess #
+              Guess Attempts:
             </p>
             <p className="guessBox">Punched numbers will be here</p>
              
