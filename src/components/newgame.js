@@ -1,5 +1,5 @@
 import React from "react";
-import Game from './app';
+import Game from './game';
 
 class Newgame extends React.Component {
     constructor(props) {
@@ -11,7 +11,7 @@ class Newgame extends React.Component {
   render() {
     return(
       <div className="new-game">
-        <Game />
+        
       </div>
     );
   }

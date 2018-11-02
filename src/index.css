@@ -1,24 +1,86 @@
-body {
-    font-family: sans-serif;
-    padding: 10px;
-    background: #1976D2;
-  }
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+header {
+  padding: 30px;
+  text-align: center;
+  background-color: steelblue;
+  color: white;
+}
+
+nav {
+  display: flex;
+  background-color: #333;
+  height: 15%;
+  width: auto;
+  justify-content: center;
+}
+
+.game {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: steelblue;
+  min-height: 400px;
+  justify-content: center;
+}
+
+ .game-elements-container{
+   height: 300px;
+   min-width: 300px;
+   background-color:#333;
+   margin-top: 30px;
+}
+
+.small-logo{
+  display: flex;
+  color: white;
+  font-size: xx-large;
+  width: auto;
+  justify-content: center;
+  padding: 10px;
+}
+.input-number{
+  width: 75%;
+  height: 35px;
+  font-size: xx-large;
+  text-align: center;
   
-  h2, h3 {
-    margin: 0;
-  }
-  
-  h2 {
-    color: white;
-  }
-  
-  ul {
-  padding: 0;
+}
+.submit-guess{
   margin-top: 15px;
-  margin-bottom: 0;
-  list-style-type: none;
-  }
-  
-  input {
-    display: block;
-  }
+  width: 75%;
+  height: 35px;
+  font-size: large;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.count{
+  width: 75%;
+  height: 35px;
+  background-color: white;
+  margin-top: 15px;
+  text-align: center;
+}
+.guessBox{
+  margin-top: 15px;
+  width: 75%;
+  height: 35px;
+  background-color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+}
+
+navbar a:hover {
+  color: #333;
+  background-color: #fff;
+}

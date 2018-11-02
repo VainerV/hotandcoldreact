@@ -11,7 +11,7 @@ class Roules extends React.Component {
   render() {
     return(
       <div className="roules">
-        <Rouleswindow />
+       
       </div>
     );
   }
