@@ -9,12 +9,7 @@ class Navbar extends React.Component {
    
   }
 
-  //   resetTheGame(){
-  //   // reset the game. Update the state to default.
-
-  //   }
-
-
+ 
   render() {
     return (
       <div  className="navbar">
@@ -24,7 +19,7 @@ class Navbar extends React.Component {
           </a>
           <a className="newGame" href="#">
            
-            <span>New Game</span>
+            <span onClick={this.props.newGame}>New Game</span>
           </a>
         </nav>
       </div>
@@ -33,4 +28,4 @@ class Navbar extends React.Component {
 }
 
 export default Navbar;
-// <Newgame reset={reset}/>
+

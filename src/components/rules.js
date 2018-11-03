@@ -17,7 +17,7 @@ class Rules extends React.Component {
             hidden secret number. 3. You will get feedback on how close ("hot")
             or far ("cold") your guess is. So, Are you ready?`}
           </p>
-          <button className="close" onClick={this.props.showRules}> Do It!</button>
+          <button className="close" onClick={this.props.showRules}> Lets Do It!</button>
         </div>
       </div>
     );
