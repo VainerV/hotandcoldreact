@@ -1,30 +1,30 @@
 import React from "react";
-import Roules from "./roules";
+import Rules from "./rules";
 import Newgame from "./newgame";
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
 
-    // this.reset = this.reset.bind(this);
+   
   }
 
-  //   reset(){
+  //   resetTheGame(){
   //   // reset the game. Update the state to default.
 
   //   }
+
 
   render() {
     return (
       <div  className="navbar">
         <nav>
-          <a className="rules" href="#">
-            {" "}
-           Rules
+          <a  className="rules"  href="#">
+          <span onClick={this.props.showRules}> Rules </span>
           </a>
           <a className="newGame" href="#">
            
-            New Game
+            <span>New Game</span>
           </a>
         </nav>
       </div>
