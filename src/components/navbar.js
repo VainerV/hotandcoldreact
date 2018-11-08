@@ -1,15 +1,13 @@
 import React from "react";
-import Rules from "./rules";
-import Newgame from "./newgame";
+
 
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
-
    
   }
 
- 
+
   render() {
     return (
       <div  className="navbar">

@@ -4,51 +4,38 @@ import Game from "./game";
 import Rules from "./rules";
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      number: Math.floor(Math.random() * 100 + 1), // random number function
-      hintColor: {
-        blue: "blue",
-        red: "red",
-        default: "steelblue"
-      },
-      hintText: {
-        cold: "Cold",
-        colder: "Colder",
-        hot: "Hot",
-        hotter: "Hotter",
-        warm: "Warm"
-      },
-      numberOfGuesses: 0,
-      guesses: [],
-      showRules: false
+      showRules: false,
+      newGame: false,
     };
+   
   }
 
-  gameCalculations(props) {
-    // main game calculations
+  newGameFunction(){
+    this.setState({ newGame: true })
+    
   }
-
-  // function will retreave the summited number
-  yourGuess(props) {}
+  
+  newGameRequest(){
+   if(this.state.newGame){
+     this.setState({ newGame: false})
+     return true;
+   }
+   else{
+     return false;
+   }
+  }
+  
 
   showRules() {
     this.setState({ showRules: !this.state.showRules });
   }
 
-  newGame() {
-    this.setState({
-        number: Math.floor(Math.random() * 100 + 1), // random number function
-        numberOfGuesses: 0,
-        guesses: [],
-        showRules: false
-      });
-   
-  }
-
   render() {
     let gameRules = <div />;
+  
     if (this.state.showRules) {
       gameRules = <Rules showRules={() => this.showRules()} />;
     }
@@ -61,13 +48,12 @@ class App extends React.Component {
         </header>
         <div className="application">
           <Navbar
-            rules={this.state}
+            newGame={() => this.newGameFunction()}
             showRules={() => this.showRules()}
-            newGame={() => this.newGame()}
+
           />
           <Game
-            {...this.state}
-            gameCalculations={() => this.gameCalculations}
+           newGameRequest = {() => this.newGameRequest()}
           />
         </div>
       </div>
