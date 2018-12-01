@@ -16,7 +16,9 @@ class App extends React.Component {
       number: Math.floor(Math.random() * 100 + 1), // random number function
       numberOfGuesses: 0,
       guesses: [],
-      userNumber: 0
+      userNumber: 0,
+      hintColor: "steelblue",
+      hintText: "HINT"
     };
   }
 
@@ -39,9 +41,11 @@ class App extends React.Component {
       guesses: [],
       userNumber: 0,
       gameOver: false,
-      gameWinner:false
+      gameWinner:false,
+      hintColor: "steelblue",
+      hintText: "HINT"
     });
-    console.log("new game reset the state", this.state);
+    //console.log("new game reset the state", this.state);
   }
 
   playTheGame(number, callback) {
@@ -94,6 +98,8 @@ class App extends React.Component {
             number={this.state.number}
             gameOver={() => this.gameOver()}
             gameWinner={()=> this.gameWinner()}
+            hintColor={this.state.hintColor}
+            hintText={this.state.hintText}
           />
         </div>
       </div>

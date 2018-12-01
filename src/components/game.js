@@ -6,8 +6,8 @@ class Game extends React.Component {
     super(props);
     this.state = {
       getTheNumber: undefined,
-      hintColor: "steelblue",
-      hintText: "HINT"
+      hintColor: this.props.hintColor,
+      hintText: this.props.hintText
     };
   }
 
@@ -43,13 +43,16 @@ class Game extends React.Component {
     }
   }
 
+
   gameLogic() {
     let hiddenNumber = this.props.number;
     let userGuess = this.state.getTheNumber;
     let guessDistance = Math.abs(hiddenNumber - userGuess);
 
+    console.log(this.props.number)
     switch (true) {
       case this.props.guesses.length > 9:
+      //this.setState({ hintColor: "steelblue", hintText: "HINT" });
         this.setState({ hintColor: "red", hintText: "GAME OVER" });
         this.props.gameOver();
 
@@ -79,9 +82,10 @@ class Game extends React.Component {
 
         break;
 
-      case guessDistance == 0:
+      case guessDistance === 0:
         this.setState({ hintColor: "green", hintText: "WINNER" });
-       // this.props.gameWinner();
+        this.props.gameWinner();
+        //this.setState({ hintColor: "steelblue", hintText: "HINT" });
         break;
 
       default:
@@ -109,7 +113,7 @@ class Game extends React.Component {
             className="input-number"
             onChange={event => this.handleNumberInputChange(event)}
             onKeyDown={event => {
-              if (event.key == "Enter") {
+              if (event.key === "Enter") {
                 this.handleSubmit(event);
               }
             }}
