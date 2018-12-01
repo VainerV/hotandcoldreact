@@ -6,7 +6,7 @@ class Gameover extends React.Component {
       <div className="modal">
         <div className="modal-content">
           <p>
-            {`Game over you exided ten attmpts to coplete the game,
+            {`Game over you are exided ten attmpts to coplete the game,
            please try again`}
           </p>
           <button className="close" onClick={this.props.newGame}>

@@ -98,8 +98,6 @@ class App extends React.Component {
             number={this.state.number}
             gameOver={() => this.gameOver()}
             gameWinner={()=> this.gameWinner()}
-            hintColor={this.state.hintColor}
-            hintText={this.state.hintText}
           />
         </div>
       </div>

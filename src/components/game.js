@@ -1,13 +1,12 @@
 import React from "react";
-//import Gameover from "./gameover";
 
 class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       getTheNumber: undefined,
-      hintColor: this.props.hintColor,
-      hintText: this.props.hintText
+      hintColor: "steelblue",
+      hintText: "HINT"
     };
   }
 
@@ -52,8 +51,8 @@ class Game extends React.Component {
     console.log(this.props.number)
     switch (true) {
       case this.props.guesses.length > 9:
-      //this.setState({ hintColor: "steelblue", hintText: "HINT" });
-        this.setState({ hintColor: "red", hintText: "GAME OVER" });
+        this.setState({ hintColor: "steelblue", hintText: "HINT" });
+       //this.setState({ hintColor: "red", hintText: "GAME OVER" });
         this.props.gameOver();
 
         break;
@@ -83,9 +82,10 @@ class Game extends React.Component {
         break;
 
       case guessDistance === 0:
-        this.setState({ hintColor: "green", hintText: "WINNER" });
+      this.setState({ hintColor: "steelblue", hintText: "HINT" });
+       //this.setState({ hintColor: "green", hintText: "WINNER" });
         this.props.gameWinner();
-        //this.setState({ hintColor: "steelblue", hintText: "HINT" });
+
         break;
 
       default:
@@ -123,7 +123,7 @@ class Game extends React.Component {
             className="submit-guess"
             onClick={event => this.handleSubmit(event)}
           >
-            Sumbit Guess
+            Submit Guess
           </button>
           <p className="count"># of Attempts: {this.props.numberOfGuesses}</p>
           <p className="guessBox">{this.props.guesses.join()}</p>
