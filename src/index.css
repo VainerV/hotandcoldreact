@@ -58,6 +58,7 @@ nav {
   font-size: xx-large;
   text-align: center;
   border-radius: 8px;
+  
 }
  .submit-guess{
   border-radius: 8px;
@@ -76,6 +77,9 @@ nav {
   border-radius: 8px;
   text-align: center;
   font-size: large;
+  justify-content: center;
+  align-items: center;
+  
 }
 .guessBox{
   background-color: steelblue;
